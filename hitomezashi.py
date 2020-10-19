@@ -1,4 +1,4 @@
-import pprint
+#! python3
 import random
 
 HEIGHT = 30
