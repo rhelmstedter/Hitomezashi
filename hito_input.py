@@ -1,4 +1,5 @@
 #!python3
+
 import random
 
 plain_text = input("What do you want to stitch? ")
