@@ -14,11 +14,11 @@ hs_evenrow = []
 # contruct veritcal stiches randomly for first row and opposite for second row.
 for stitch in range(WIDTH):
     if random.randint(0, 1) == 1:
-        vs_oddrow.append('|')
-        vs_evenrow.append(' ')
+        vs_oddrow.append("|")
+        vs_evenrow.append(" ")
     else:
-        vs_oddrow.append(' ')
-        vs_evenrow.append('|')
+        vs_oddrow.append(" ")
+        vs_evenrow.append("|")
 
 
 # construct nested lists of all vertical stitches
@@ -30,12 +30,12 @@ for row in range(HEIGHT):
 
 # construct horizontal stitches
 while len(hs_oddrow) < WIDTH:
-    hs_oddrow.append('__')
-    hs_oddrow.append('  ')
+    hs_oddrow.append("__")
+    hs_oddrow.append("  ")
 
 while len(hs_evenrow) < WIDTH:
-    hs_evenrow.append('  ')
-    hs_evenrow.append('__')
+    hs_evenrow.append("  ")
+    hs_evenrow.append("__")
 
 # construct nested lists of all horizontal stitches
 for row in range(HEIGHT):
@@ -45,9 +45,9 @@ for row in range(HEIGHT):
         hs_grid.append(hs_oddrow)
 
 # print out the horizontal and vertical stitches together
-print("___"*WIDTH)
+print("___" * WIDTH)
 for vs, hs in zip(vs_grid, hs_grid):
     for stitch in range(WIDTH):
-        print(vs[stitch]+hs[stitch], end='')
+        print(vs[stitch] + hs[stitch], end="")
     print()
-print("___"*WIDTH)
+print("___" * WIDTH)
