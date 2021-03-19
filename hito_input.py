@@ -63,7 +63,7 @@ for letter in plain_text:
     binary_text += binary_code
 
 vgrid = []
-vodd = []
+vodd =[]
 veven = []
 hgrid = []
 hodd = []
