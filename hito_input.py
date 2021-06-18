@@ -55,15 +55,16 @@ binary = {
     "z": "01111010",
 }
 
-plain_text = input("What do you want to stitch? ")
-
-binary_text = ""
-for letter in plain_text:
-    binary_code = binary.get(letter)
-    binary_text += binary_code
+while True:
+    try:
+        plain_text = input("What do you want to stitch? ")
+        binary_text = ''.join([binary.get(letter) for letter in plain_text])
+        break
+    except TypeError:
+        print('Please enter the letters A-Z or a-z only.\n')
 
 vgrid = []
-vodd =[]
+vodd = []
 veven = []
 hgrid = []
 hodd = []
