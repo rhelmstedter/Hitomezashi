@@ -111,3 +111,4 @@ for v, h in zip(vgrid, hgrid):
         print(v[i] + h[i], end="")
     print()
 print("___" * len(binary_text))
+
